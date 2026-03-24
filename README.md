@@ -11,21 +11,14 @@
     <a href="https://yunhuiguo.github.io/"><strong>Yunhui Guo</strong></a><sup>1</sup>
   </p>
 
-  <p align="center" style="margin: 0;">
-  <sup>1</sup>The University of Texas at Dallas
-  </p>
-
-  <p align="center" style="margin: 2px 0 0 0; font-size: 18px; font-weight: bold;">
-  CVPR 2026
+  <p align="center">
+  <sup>1</sup>The University of Texas at Dallas<br>
+  <b>CVPR 2026</b>
   </p>
 
   <p align="center">
-  <a href="https://arxiv.org/abs/2601.01695" style="text-decoration:none;">
-    <img src="https://img.shields.io/badge/arXiv-2601.01695-b31b1b.svg" alt="arXiv" />
-  </a>
-  <a href="https://arxiv.org/pdf/2601.01695" style="text-decoration:none;">
-    <img src="https://img.shields.io/badge/Paper-PDF-green?style=flat&logo=adobeacrobatreader&logoColor=white&labelColor=66cc00&color=94DD15" alt="Paper PDF" />
-  </a>
+  <a href="https://arxiv.org/pdf/2601.01695"><img src="https://img.shields.io/badge/Paper-PDF-green?style=flat&logo=adobeacrobatreader&logoColor=white&labelColor=66cc00&color=94DD15" alt="Paper PDF" /></a>
+  <a href="YOUR_PROJECT_PAGE_URL"><img src="https://img.shields.io/badge/Project-Page-blue" alt="Project Page" /></a>
 </p>
 
 <p align="center">
