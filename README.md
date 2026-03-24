@@ -23,7 +23,6 @@
     <a href="https://arxiv.org/abs/2601.01695">
       <img src="https://img.shields.io/badge/arXiv-2601.01695-b31b1b.svg" alt="arXiv">
     </a>
-    &nbsp;
     <a href="https://arxiv.org/pdf/2601.01695">
       <img src='https://img.shields.io/badge/Paper-PDF-green?style=flat&logo=adobeacrobatreader&logoColor=white&labelColor=66cc00&color=94DD15' alt='Paper PDF'>
     </a>
@@ -38,20 +37,6 @@ This repository contains the official implementation of **LH3D** — a learnabil
 
 ---
 
-# Overview
-
-Annotating roadside 3D perception data is expensive. LH3D addresses this with a **pool-based active learning** loop that selects images maximally informative for the BEVHeight detector, measured along three complementary axes:
-
-| Stage | Criterion | What it selects |
-|---|---|---|
-| **A** | Low depth entropy + depth coverage | Images where the model is **confidently wrong** in under-covered depth ranges |
-| **B** | Object diversity + class balance | Images with **diverse object categories** that fix labeled-set class imbalance |
-| **C** | Gaussian NLL similarity / dissimilarity | Images **similar** to the labeled scene distribution (80%) + **outliers** per class (20%) |
-
-The annotation budget is tracked in **object counts** (GT boxes), not image counts, for realistic comparison.
-
----
-
 # Getting Started
 
 ### Installation
@@ -62,7 +47,7 @@ See [docs/install.md](docs/install.md) for environment setup.
 
 See [docs/prepare_dataset.md](docs/prepare_dataset.md) for DAIR-V2X-I and Rope3D setup.
 
-### Fully-Supervised Training (BEVHeight baseline)
+<!-- ### Fully-Supervised Training (BEVHeight baseline)
 
 ```bash
 # Train with 8 GPUs
@@ -72,41 +57,31 @@ python exps/dair-v2x/bev_height_lss_r50_864_1536_128x128_102.py \
 # Evaluate
 python exps/dair-v2x/bev_height_lss_r50_864_1536_128x128_102.py \
   --ckpt_path [CKPT_PATH] -e -b 8 --gpus 8
-```
+``` -->
 
-### Active Learning with LH3D
+### Training with LH3D
 
 ```bash
 # DAIR-V2X-I
 python exps/dair-v2x/bev_height_lss_r50_864_1536_128x128_active.py \
   --al_enabled \
   --al_method lh3d \
-  --al_init_size 100 \
-  --al_query_size 100 \
-  --al_rounds 5 \
-  --al_epochs_per_round 10 \
-  --al_max_objects 3000 \
-  --devices 1
+  --al_init_size 500 \
+  --al_query_size 120 \
+  --al_rounds 10 \
+  --al_epochs_per_round 5 \
+  --al_max_objects 32000 \
 
 # Rope3D
 python exps/rope3d/bev_height_lss_r50_864_1536_128x128_active.py \
   --al_enabled \
   --al_method lh3d \
-  --al_init_size 100 \
-  --al_query_size 100 \
-  --al_rounds 5 \
-  --al_epochs_per_round 10 \
-  --al_max_objects 3000 \
-  --devices 1
+  --al_init_size 500 \
+  --al_query_size 120 \
+  --al_rounds 10 \
+  --al_epochs_per_round 5 \
+  --al_max_objects 32000 \
 ```
-
-**Available `--al_method` options:**
-
-| Method | Description |
-|---|---|
-| `random` | Uniform random selection (lower bound) |
-| `entropy` | Class-logit entropy uncertainty |
-| `lh3d` | **Our method** — learnability-driven submodular selection |
 
 ---
 
