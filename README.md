@@ -11,11 +11,13 @@
     <a href="https://yunhuiguo.github.io/"><strong>Yunhui Guo</strong></a><sup>1</sup>
   </p>
 
-  <p align="center">
-    <sup>1</sup>The University of Texas at Dallas
+  <p align="center" style="margin: 0;">
+  <sup>1</sup>The University of Texas at Dallas
   </p>
 
-  <h3 align="center">CVPR 2026</h3>
+  <p align="center" style="margin: 2px 0 0 0; font-size: 18px; font-weight: bold;">
+  CVPR 2026
+  </p>
 
   <p align="center">
     <a href="https://arxiv.org/abs/2601.01695">
@@ -28,7 +30,7 @@
   </p>
 
   <div align="center">
-    <img src="./assets/pipline_lh3d.png" alt="LH3D Pipeline" width="88%">
+    <img src="./assets/pipeline_lh3d.png" alt="LH3D Pipeline" width="88%">
   </div>
 </p>
 
