@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Data & checkpoints (too large for git)
+data/
+outputs/
+checkpoints/
+checkpoints_al/
+*.ckpt
+*.pth
+*.pkl
+*.bin
+
+# Compiled CUDA extensions
+ops/**/*.so
+ops/**/*.o
+ops/**/*.egg-info/
+
+# Logs & temp
+*.log
+*.tmp
+tensorboard/
+tb_logs/
+wandb/
+.cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backup files created by training
+backup/
+backup_round_*/
