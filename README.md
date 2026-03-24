@@ -20,17 +20,17 @@
   </p>
 
   <p align="center">
-    <a href="https://arxiv.org/abs/2601.01695">
-      <img src="https://img.shields.io/badge/arXiv-2601.01695-b31b1b.svg" alt="arXiv">
-    </a>
-    <a href="https://arxiv.org/pdf/2601.01695">
-      <img src='https://img.shields.io/badge/Paper-PDF-green?style=flat&logo=adobeacrobatreader&logoColor=white&labelColor=66cc00&color=94DD15' alt='Paper PDF'>
-    </a>
-  </p>
+  <a href="https://arxiv.org/abs/2601.01695" style="text-decoration:none;">
+    <img src="https://img.shields.io/badge/arXiv-2601.01695-b31b1b.svg" alt="arXiv" />
+  </a>
+  <a href="https://arxiv.org/pdf/2601.01695" style="text-decoration:none;">
+    <img src="https://img.shields.io/badge/Paper-PDF-green?style=flat&logo=adobeacrobatreader&logoColor=white&labelColor=66cc00&color=94DD15" alt="Paper PDF" />
+  </a>
+</p>
 
-  <div align="center">
-    <img src="./assets/pipeline_lh3d.png" alt="LH3D Pipeline" width="88%">
-  </div>
+<p align="center">
+  <img src="./assets/pipeline_lh3d.png" alt="LH3D Pipeline" width="88%" />
+</p>
 </p>
 
 This repository contains the official implementation of **LH3D** — a learnability-driven active learning framework for vision-based roadside 3D object detection. Built on top of [BEVHeight](https://arxiv.org/abs/2303.08498), LH3D selects the most informative training samples under a fixed annotation budget using a three-stage submodular selection strategy driven by depth learnability, spatial diversity, and geometric similarity.
